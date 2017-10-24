@@ -35,7 +35,7 @@ class MyUserManager(BaseUserManager):
         return user
 
 
-class BaseUser(AbstractBaseUser):
+class User(AbstractBaseUser):
     username = models.CharField(max_length=30, unique=True, primary_key=True)
     is_admin = models.BooleanField(default=False)
 

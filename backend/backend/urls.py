@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from rest.views import MyObtainAuthToken
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/', MyObtainAuthToken.as_view())
 ]
